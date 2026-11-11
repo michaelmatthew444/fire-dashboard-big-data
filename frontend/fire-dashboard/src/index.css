@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  /* Dark Theme Palette */
+  --color-bg: #0b0f17;          /* Dark main background */
+  --color-surface: #111827;     /* Surface/container dark gray */
+  --color-text: #e5e7eb;        /* Light primary text */
+  --color-text-h: #f9fafb;      /* High-contrast header text */
+  --color-border: #1f2937;      /* Subtle dark border */
+  --color-code-bg: #1f2937;     /* Dark code block background */
+
+  /* Accent Colors */
+  --color-accent: #22c55e;
+  --color-accent-hover: #16a34a;
+  --color-accent-bg: rgba(34, 197, 94, 0.12);
+  --color-accent-border: rgba(34, 197, 94, 0.3);
+
+  --font-sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, Consolas, monospace;
+
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Code block styles */
+code,
+.counter {
+  font-family: var(--font-mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--color-text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--color-code-bg);
+  border: 1px solid var(--color-border);
+}
